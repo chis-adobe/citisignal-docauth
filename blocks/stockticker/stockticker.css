@@ -1,0 +1,6 @@
+
+.stockticker div:nth-child(2) {
+    visibility: hidden;   
+    padding: 0%;
+  }
+  
