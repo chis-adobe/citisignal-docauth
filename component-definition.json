@@ -313,7 +313,7 @@
                   "template": {
                     "name": "stockticker",
                     "model": "stockticker",
-                    "author":"Ferris Bueller"
+                    "high-pricer":""
                   }
                 }
               }
