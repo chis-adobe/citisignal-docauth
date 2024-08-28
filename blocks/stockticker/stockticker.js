@@ -1,24 +1,45 @@
-alert (document.getElementsByClassName("stockticker")[0]);
+const nodeList = document.querySelectorAll("p");
+document.write(nodeList[0].innerHTML);
+
+// Create a new stock price information element
+var div = document.createElement("div");
+// Set the div's content
+div.innerHTML = "<div id=\"stock-price-information\"></div>";
+// Add the div to the page
+document.body.appendChild(div);
+
+// Create a new stock price element
+var div = document.createElement("div");
+// Set the div's content
+div.innerHTML = "<div id=\"stock-price\"></div>";
+// Add the div to the page
+document.body.appendChild(div);
+
+// Create a new high price element
+var div = document.createElement("div");
+// Set the div's content
+div.innerHTML = "<div id=\"high-price\"></div>";
+// Add the div to the page
+document.body.appendChild(div);
+
+// Create a new low-price element
+var div = document.createElement("div");
+// Set the div's content
+div.innerHTML = "<div id=\"low-price\"></div>";
+// Add the div to the page
+document.body.appendChild(div);
 
 
-var searchSymbols = document.getElementsByClassName("stockticker")[0].innerHTML
+// Create a new trade datelement
+var div = document.createElement("div");
+// Set the div's content
+div.innerHTML = "<div id=\"trade-date\"></div>";
+// Add the div to the page
+document.body.appendChild(div);
 
-var searchSymbol = searchSymbols.replace(/<div>|<\/div>/g, '');
 
-var stockSymbol = searchSymbol.match(/\S+/g);
-
-if (stockSymbol[0] === "undefined"){
-
-      // Do not display anything.
-      document.getElementById('stock-price-information').textContent = 'Nothing to show.';
-      document.getElementById('stock-price').textContent = '';
-      document.getElementById('high-price').textContent = '';
-      document.getElementById('low-price').textContent = '';
-      document.getElementById('trade-date').textContent = '';
-}
-else {
 // Make an HTTP request to the Alpha Vantage API
-fetch ('http://127.0.0.1:5500/css/css/stock-price.json')
+fetch ('http://127.0.0.1:5500/css/stock-price.json')
 //fetch('https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol='+stockSymbol[1]+'&apikey=YOUR_API_KEY')
   .then(response => response.json())
   .then(data => {
@@ -57,8 +78,3 @@ fetch ('http://127.0.0.1:5500/css/css/stock-price.json')
   .catch(error => {
     console.log('Error fetching stock price:', error);
   });
-}
-
-//  fetch ('http://127.0.0.1:5500/css/stock-price.json')
-//  alert (stockSymbol[1])
-//  fetch('https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=ADBE&apikey=YOUR_API_KEY')

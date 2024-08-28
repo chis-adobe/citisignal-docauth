@@ -828,13 +828,6 @@
           "name": "stockticker",
           "label": "Symbol",
           "value": ""
-        },
-        {
-          "component": "text-input",
-          "valueType": "string",
-          "name": "high-price",
-          "label": "High Price",
-          "value": ""
         }
       ]
     },
