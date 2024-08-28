@@ -828,6 +828,13 @@
           "name": "stockticker",
           "label": "Symbol",
           "value": ""
+        },
+        {
+          "component": "text-input",
+          "valueType": "string",
+          "name": "author",
+          "label": "Author",
+          "value": ""
         }
       ]
     },
