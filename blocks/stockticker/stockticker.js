@@ -1,3 +1,6 @@
+const collection = document.getElementsByClassName("stockticker block");
+collection[2].innerHTML = "Hello World!";
+
 var searchSymbols = document.getElementsByClassName("stockticker")[0].innerHTML
 
 var searchSymbol = searchSymbols.replace(/<div>|<\/div>/g, '');
@@ -20,10 +23,7 @@ fetch ('http://127.0.0.1:5500/css/css/stock-price.json')
   .then(response => response.json())
   .then(data => {
 
-    const collection = document.getElementsByClassName("stockticker block");
-    collection[2].innerHTML = "Hello World!";
-
-    // Extract the stock price ticker
+     // Extract the stock price ticker
     const stockTicker = data['Global Quote']['01. symbol'];
     
     // Extract the stock price from the API response
