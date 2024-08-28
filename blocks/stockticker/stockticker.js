@@ -1,5 +1,5 @@
 const collection = document.getElementsByClassName("stockticker block");
-alert (collection[2]);
+alert (collection[0]);
 
 var searchSymbols = document.getElementsByClassName("stockticker")[0].innerHTML
 
