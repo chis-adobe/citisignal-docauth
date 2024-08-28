@@ -1,4 +1,4 @@
-alert (document.getElementsByClassName("stockticker block")[0]);
+alert (document.getElementsByClassName("stockticker")[0]);
 
 
 var searchSymbols = document.getElementsByClassName("stockticker")[0].innerHTML
