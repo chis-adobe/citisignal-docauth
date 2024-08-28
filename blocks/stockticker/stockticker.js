@@ -19,6 +19,10 @@ fetch ('http://127.0.0.1:5500/css/css/stock-price.json')
 //fetch('https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol='+stockSymbol[1]+'&apikey=YOUR_API_KEY')
   .then(response => response.json())
   .then(data => {
+
+    const collection = document.getElementsByClassName("stockticker block");
+    collection[2].innerHTML = "Hello World!";
+
     // Extract the stock price ticker
     const stockTicker = data['Global Quote']['01. symbol'];
     
