@@ -313,7 +313,7 @@
                   "template": {
                     "name": "stockticker",
                     "model": "stockticker",
-                    "high-pricer":""
+                    "high-price":""
                   }
                 }
               }
