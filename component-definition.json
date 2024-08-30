@@ -187,9 +187,33 @@
                     "name": "Product Details",
                     "model": "product-details",
                     "key-value": true,
-                    "date": "08/07/2024",
+                    "date": "08/22/2024",
+                    "add-to-cart-btn-text": "Add To Cart",
+                    "add-to-wishlist-btn-text": "Add To List",
+                    "share-btn-text": "Share",
                     "carousel-layout": "column",
-                    "default-product": "apple-iphone-13/phone-13-pro"
+                    "default-product": "samsung-galaxy-S22-ultra"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "title": "Product Details Plan",
+            "id": "product-details-plan",
+            "plugins": {
+              "xwalk": {
+                "page": {
+                  "resourceType": "core/franklin/components/block/v1/block",
+                  "template": {
+                    "name": "Product Details Plan",
+                    "model": "product-details-plan",
+                    "key-value": true,
+                    "add-to-cart-btn-text": "Add To Cart",
+                    "add-to-wishlist-btn-text": "Add To List",
+                    "share-btn-text": "Share",
+                    "carousel-layout": "column",
+                    "default-product": "connect-max-plan"
                   }
                 }
               }
@@ -267,7 +291,61 @@
                   "template": {
                     "name": "Columns",
                     "model": "columns",
-                    "classes": "grid"
+                    "filter": "columns"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "title": "Text",
+            "id": "columns-text",
+            "plugins": {
+              "xwalk": {
+                "page": {
+                  "resourceType": "core/franklin/components/block/v1/block/item",
+                  "template": {
+                    "model": "columns-text",
+                    "name" : "Text",
+                    "grid_title" : "Placeholder Title",
+                    "grid_description": "Placeholder Description",
+                    "classes": "grid-layout"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "title": "Icon",
+            "id": "columns-icon",
+            "plugins": {
+              "xwalk": {
+                "page": {
+                  "resourceType": "core/franklin/components/block/v1/block/item",
+                  "template": {
+                    "model": "columns-icon",
+                    "name" : "Icon",
+                    "gridIcon_icon": ":delivery-home:",
+                    "gridIcon_description": "Placeholder Description",
+                    "classes": "icon-layout"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "title": "Promo",
+            "id": "columns-promo",
+            "plugins": {
+              "xwalk": {
+                "page": {
+                  "resourceType": "core/franklin/components/block/v1/block/item",
+                  "template": {
+                    "model": "columns-promo",
+                    "name" : "Promo",
+                    "gridPromo_image" : "/content/dam/citisignal/product-enrichment-1.png",
+                    "gridPromo_description" : "Placeholder Description",
+                    "classes": "promo-layout"
                   }
                 }
               }
@@ -298,21 +376,6 @@
                   "template": {
                     "name": "Card",
                     "model": "card"
-                  }
-                }
-              }
-            }
-          },
-          {
-            "title": "StockTicker",
-            "id": "stockticker",
-            "plugins": {
-              "xwalk": {
-                "page": {
-                  "resourceType": "core/franklin/components/block/v1/block",
-                  "template": {
-                    "name": "stockticker",
-                    "model": "stockticker"
                   }
                 }
               }

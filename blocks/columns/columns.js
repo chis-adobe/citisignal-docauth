@@ -1,5 +1,7 @@
 import { getAemAuthorEnv } from '../../scripts/configs.js';
 
+const AEM_DIV_EXTRA_CONTENT = ['text, grid-layout', 'icon, icon-layout', 'promo, promo-layout'];
+
 export default function decorate(block) {
   // this is for UE to use the same columns block no matter the layout
   // eslint-disable-next-line no-plusplus
@@ -9,8 +11,10 @@ export default function decorate(block) {
       block.classList.add('grid');
     }
   }
-  const cols = [...block.firstElementChild.children];
-  block.classList.add(`columns-${cols.length}-cols`);
+  if (block.firstElementChild && block.firstElementChild.children) {
+    const cols = [...block.firstElementChild.children];
+    block.classList.add(`columns-${cols.length}-cols`);
+  }
 
   // setup image columns
   [...block.children].forEach((row) => {
@@ -24,19 +28,22 @@ export default function decorate(block) {
         }
       }
       // this is to remove empty <div></div> because of UE
-      // using the same columns block
+      // using the same columns block, only in PREVIEW/PUBLISH
       if (!col.textContent.trim()) {
         row.remove();
+      }
+      // this is to remove the info-only <div></div> listing the style
+      // chosen in UE because it's not an actual 'content' block
+      if (AEM_DIV_EXTRA_CONTENT.includes(col.textContent.trim())) {
+        col.remove();
       }
     });
   });
 
   const isAemAuthor = getAemAuthorEnv();
   if (isAemAuthor && /^\s*\n\s*$/.test(block.innerHTML)) { // block.innerHTML.trim() === '' && block.childNodes && block.childNodes.length === 0) {
-    /* eslint-disable-next-line no-console */
-    console.log(`in columns block, inner HTML = ${block.innerHTML}, text content = ${block.textContent}`);
     const authorBlock = document.createElement('div');
-    authorBlock.textContent = 'Columns block for enrichment';
+    authorBlock.textContent = 'Columns container for enrichment';
     block.appendChild(authorBlock);
   }
 }

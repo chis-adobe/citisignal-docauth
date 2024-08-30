@@ -16,16 +16,6 @@
           "component": "text",
           "name": "robots",
           "label": "Robots"
-        },
-        {
-          "component": "text",
-          "name": "enrichment-categories",
-          "label": "Enrichment Categories"
-        },
-        {
-          "component": "text",
-          "name": "enrichment-positions",
-          "label": "Enrichment Positions"
         }
       ]
     },
@@ -464,7 +454,7 @@
           "name": "date",
           "label": "Date",
           "description": "Enter a valid date in the format MM/DD/YYYY",
-          "required": true,
+          "required": false,
           "validation": {
             "minLength": 8,
             "regExp": "^(0[1-9]|1[0-2])\/(0[1-9]|[12][0-9]|3[01])\/\\d{4}$",
@@ -515,6 +505,84 @@
           "valueType": "string",
           "name": "default-product",
           "label": "Default Product",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "product-details-plan",
+      "fields": [
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "date",
+          "label": "Date",
+          "description": "Enter a valid date in the format MM/DD/YYYY",
+          "required": false,
+          "validation": {
+            "minLength": 8,
+            "regExp": "^(0[1-9]|1[0-2])\/(0[1-9]|[12][0-9]|3[01])\/\\d{4}$",
+            "customErrorMsg": "Enter a valid date in the format MM/DD/YYYY"
+          },
+          "value": ""
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "add-to-cart-btn-text",
+          "label": "Add To Cart Button Text",
+          "value": ""
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "add-to-wishlist-btn-text",
+          "label": "Add To Wishlist Button Text",
+          "value": ""
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "share-btn-text",
+          "label": "Share Button Text",
+          "value": ""
+        },
+        {
+          "component": "select",
+          "valueType": "string",
+          "name": "carousel-layout",
+          "label": "Carousel Layout",
+          "value": "",
+          "options": [
+            {
+              "name": "Column",
+              "value": "column"
+            },
+            {
+              "name": "Row",
+              "value": "row"
+            }
+          ]
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "default-product",
+          "label": "Default Product",
+          "value": ""
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "modal-content-title",
+          "label": "Modal Content Title",
+          "value": ""
+        },
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "modal-content-description",
+          "label": "Modal Content Description",
           "value": ""
         }
       ]
@@ -599,183 +667,89 @@
               "value": "promo"
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "columns-text",
+      "fields": [
+        {
+          "component": "text",
+          "name": "classes",
+          "valueType": "string",
+          "hidden": true
         },
         {
-          "component": "container",
-          "name": "grid-columns-left",
-          "label": "Columns (Grid)",
-          "collapsible": false,
-          "condition": { "==": [{ "var": "classes" }, "grid"] },
-          "fields": [
+          "component": "text",
+          "name": "grid_title",
+          "label": "Title",
+          "valueType": "string",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "name": "grid_description",
+          "label": "Description",
+          "valueType": "string",
+          "multi": false
+        }
+      ]
+    },
+    {
+      "id": "columns-icon",
+      "fields": [
+        {
+          "component": "text",
+          "name": "classes",
+          "valueType": "string",
+          "hidden": true
+        },
+        {
+          "component": "select",
+          "name": "gridIcon_icon",
+          "value": "",
+          "label": "Icon",
+          "valueType": "string",
+          "options": [
             {
-              "component": "text",
-              "name": "gridLeft_title",
-              "label": "Title",
-              "valueType": "string",
-              "multi": false
+              "name": "Home",
+              "value": ":delivery-home:"
             },
             {
-              "component": "text",
-              "name": "gridLeft_description",
-              "label": "Description",
-              "valueType": "string",
-              "multi": false
+              "name": "Truck",
+              "value": ":delivery-truck:"
             }
           ]
         },
         {
-          "component": "container",
-          "name": "grid-columns-middle",
-          "label": "Columns (Grid)",
-          "collapsible": false,
-          "condition": { "==": [{ "var": "classes" }, "grid"] },
-          "fields": [
-            {
-              "component": "text",
-              "name": "gridMiddle_title",
-              "label": "Title",
-              "valueType": "string",
-              "multi": false
-            },
-            {
-              "component": "text",
-              "name": "gridMiddle_description",
-              "label": "Description",
-              "valueType": "string",
-              "multi": false
-            }
-          ]
+          "component": "text",
+          "name": "gridIcon_description",
+          "label": "Description",
+          "valueType": "string",
+          "multi": false
+        }
+      ]
+    },
+    {
+      "id": "columns-promo",
+      "fields": [
+        {
+          "component": "text",
+          "name": "classes",
+          "valueType": "string",
+          "hidden": true
         },
         {
-          "component": "container",
-          "name": "grid-columns-right",
-          "label": "Columns (Grid)",
-          "collapsible": false,
-          "condition": { "==": [{ "var": "classes" }, "grid"] },
-          "fields": [
-            {
-              "component": "text",
-              "name": "gridRight_title",
-              "label": "Title",
-              "valueType": "string",
-              "multi": false
-            },
-            {
-              "component": "text",
-              "name": "gridRight_description",
-              "label": "Description",
-              "valueType": "string",
-              "multi": false
-            }
-          ]
+          "component": "reference",
+          "valueType": "string",
+          "name": "gridPromo_image",
+          "label": "Image"
         },
         {
-          "component": "container",
-          "name": "grid-icon-columns-left",
-          "label": "Columns (Grid Icons)",
-          "collapsible": false,
-          "condition": { "==": [{ "var": "classes" }, "grid-placeholder-icons"] },
-          "fields": [
-            {
-              "component": "select",
-              "name": "gridIconLeft_icon",
-              "value": "",
-              "label": "Icon",
-              "valueType": "string",
-              "options": [
-                {
-                  "name": "Home",
-                  "value": ":delivery-home:"
-                },
-                {
-                  "name": "Truck",
-                  "value": ":delivery-truck:"
-                }
-              ]
-            },
-            {
-              "component": "text",
-              "name": "gridIconLeft_text",
-              "label": "Text",
-              "valueType": "string",
-              "multi": false
-            }
-          ]
-        },
-        {
-          "component": "container",
-          "name": "grid-icon-columns-right",
-          "label": "Columns (Grid Icons)",
-          "collapsible": false,
-          "condition": { "==": [{ "var": "classes" }, "grid-placeholder-icons"] },
-          "fields": [
-            {
-              "component": "select",
-              "name": "gridIconRight_icon",
-              "value": "",
-              "label": "Icon",
-              "valueType": "string",
-              "options": [
-                {
-                  "name": "Home",
-                  "value": ":delivery-home:"
-                },
-                {
-                  "name": "Truck",
-                  "value": ":delivery-truck:"
-                }
-              ]
-            },
-            {
-              "component": "text",
-              "name": "gridIconRight_text",
-              "label": "Text",
-              "valueType": "string",
-              "multi": false
-            }
-          ]
-        },
-        {
-          "component": "container",
-          "name": "promo-columns-left",
-          "label": "Columns (Promo)",
-          "collapsible": false,
-          "condition": { "==": [{ "var": "classes" }, "promo"] },
-          "fields": [
-            {
-              "component": "reference",
-              "valueType": "string",
-              "name": "promoEnrichmentLeft_image",
-              "label": "Image"
-            },
-            {
-              "component": "text",
-              "name": "promoEnrichmentLeft_description",
-              "label": "Text",
-              "valueType": "string"
-            }
-          ]
-        },
-        {
-          "component": "container",
-          "name": "promo-columns-right",
-          "label": "Columns (Promo)",
-          "collapsible": false,
-          "condition": { "==": [{ "var": "classes" }, "promo"] },
-          "fields": [
-            {
-              "component": "reference",
-              "valueType": "string",
-              "name": "promoEnrichmentRight_image",
-              "label": "Image"
-            },
-            {
-              "component": "text",
-              "name": "promoEnrichmentRight_description",
-              "label": "Text",
-              "valueType": "string"
-            }
-          ]
+          "component": "text",
+          "name": "gridPromo_description",
+          "label": "Description",
+          "valueType": "string"
         }
       ]
     },
@@ -816,18 +790,6 @@
           "name": "presentation",
           "label": "Presentation",
           "multi": false
-        }
-      ]
-    },
-    {
-      "id": "stockticker",
-      "fields": [
-       {
-          "component": "text-input",
-          "valueType": "string",
-          "name": "stockticker",
-          "label": "Symbol",
-          "value": ""
         }
       ]
     },

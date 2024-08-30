@@ -19,12 +19,20 @@
         "product-list-page",
         "enrichment",
         "product-details",
+        "product-details-plan",
         "recommended-products",
         "commerce-cart",
         "commerce-checkout",
         "commerce-order-confirmation",
-        "columns",
-        "stockticker"
+        "columns"
+      ]
+    },
+    {
+      "id": "columns",
+      "components": [
+        "columns-text",
+        "columns-icon",
+        "columns-promo"
       ]
     },
     {
