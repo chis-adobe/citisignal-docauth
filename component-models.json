@@ -794,18 +794,6 @@
       ]
     },
     {
-      "id": "stockticker",
-      "fields": [
-       {
-          "component": "text-input",
-          "valueType": "string",
-          "name": "stockticker",
-          "label": "Symbol",
-          "value": ""
-        }
-      ]
-    },
-    {
       "id": "card",
       "fields": [
         {
