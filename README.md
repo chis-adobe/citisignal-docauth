@@ -6,8 +6,8 @@ https://experienceleague.adobe.com/developer/commerce/storefront/
 
 ## Environments
 
-- Preview: https://main--citisignal-temp--joannehoadobe.hlx.page/
-- Live: https://main--citisignal-temp--joannehoadobe.hlx.live/
+- Preview: https://main--citisignal-xwalk--chis-adobe.hlx.page/
+- Live: https://main--citisignal-xwalk--chis-adobe.hlx.live/
 
 ## Pre-requisites
 
