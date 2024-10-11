@@ -1,8 +1,5 @@
 mountpoints:
-  /:
-    url: "https://author-p130746-e1298459.adobeaemcloud.com/bin/franklin.delivery/chis-adobe/citisignal-xwalk/main"
-    type: "markup"
-    suffix: ".html"
+  /: https://adobe.sharepoint.com/:f:/r/sites/AEMNAMExpertSCs/Shared%20Documents/Web%20Foundation%20Training/chis/CitiSignal-Storefront?csf=1&web=1&e=Gpb6lY
 
 folders:
   /products/plan/: /products/plan/default
